@@ -1,5 +1,5 @@
 variable "aws_region" {
-  description = "AWS region where resources will be deployed"
+  description = "AWS region to deploy resources"
   type        = string
   default     = "us-east-1"
 }
@@ -10,33 +10,28 @@ variable "vpc_name" {
 }
 
 variable "vpc_cidr" {
-  description = "CIDR block for VPC"
+  description = "CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
 }
 
 variable "public_subnet_cidr" {
-  description = "CIDR block for public subnet"
+  description = "CIDR block for the public subnet"
   type        = string
-  default     = "10.0.1.0/24"
 }
 
 variable "private_subnet_cidr" {
-  description = "CIDR block for private subnet"
+  description = "CIDR block for the private subnet"
   type        = string
-  default     = "10.0.2.0/24"
 }
 
 variable "availability_zone" {
   description = "AWS Availability Zone"
   type        = string
-  default     = "us-east-1a"
 }
 
 variable "nat_gateway_enabled" {
   description = "Enable or disable NAT Gateway"
   type        = bool
-  default     = true
 }
 
 variable "enable_dns_support" {
